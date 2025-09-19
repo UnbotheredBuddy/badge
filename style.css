@@ -1,0 +1,95 @@
+/* General page style */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Profile card container */
+.card {
+  position: relative; /* establishes containing block for absolute elements */
+  width: 320px;
+  background: linear-gradient(135deg, #ca77e3, #7ca5eb);
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box; /* ensures padding stays inside width */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  margin: 10px;
+}
+
+/* Badge */
+.badge {
+  position: absolute; /* positioned relative to .card */
+  top: 10px;
+  right: 10px;
+  background: gold;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/* Profile image */
+.image-container {
+  position: relative; /* containing block for decorative icon */
+  display: inline-block;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+/* Decorative icon bottom-left of profile image */
+.decor-icon {
+  position: absolute; /* relative to .image-container */
+  bottom: 0;
+  left: 0;
+  background: white;
+  color: #2575fc;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid #2575fc;
+}
+
+/* Name and bio */
+.name {
+  margin: 15px 0 5px;
+  font-size: 1.5rem;
+}
+
+.bio {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive layout: stack vertically on small screens */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
